@@ -55,7 +55,7 @@ with col1:
 with col2:
     region_selection = st.selectbox("Región", options=["North", "South", "Center"], help="Región geográfica del cliente.")
     support_tickets = st.number_input("Tickets de Soporte", min_value=0, value=1, help="Número de veces que el cliente ha contactado a soporte.")
-    average_spend = st.number_input("Gasto Promedio ($")", min_value=0.0, value=50.0, format="%.2f", help="Gasto promedio mensual del cliente.")
+    average_spend = st.number_input("Gasto Promedio ($)", min_value=0.0, value=50.0, format="%.2f", help="Gasto promedio mensual del cliente.")
 
 days_antiquity = st.number_input("Días de Antigüedad como Cliente", min_value=0, value=365, help="Número de días desde que el cliente se registró.")
 
@@ -97,7 +97,7 @@ if st.button("🚀 Analizar Riesgo de Abandono"):
                 st.markdown(f"<p style='font-size:20px;'>Probabilidad de Estabilidad: <b>{prob_stable*100:.2f}%</b></p>", unsafe_allow_html=True)
 
             st.metric(label="Probabilidad de Abandono (Clase 1)", value=f"{prob_churn*100:.2f}%")
-            st.metric(label="Probabilidad de Estabilidad (Clase 0)", value=f"{prob_stable*100:.2f}%")
+            st.metric(label="Probabilidad de Estabilidad (Clase 0)", value=f"{prob_stable*100:.2f}%वरुन)")
 
             st.markdown("--- ")
             st.info("**Nota:** La Clase 1 indica 'Alto Riesgo de Cancelación', la Clase 0 indica 'Cliente Estable'.")
